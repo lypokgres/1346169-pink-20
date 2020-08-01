@@ -1,14 +1,21 @@
 .download {
   background-color: @darkgray;
-  align-items: center;
   padding-top: 28px;
   padding-bottom: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 1;
+
+  @media (min-width: 660px) {
+    background-color: transparent;
+    width: 340px;
+    margin-bottom: 119px;
+  }
 }
 
 .download__button {
   display: block;
   color: @white;
-  width: 280px;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
@@ -57,11 +64,14 @@
 }
 
 .download__description {
-  width: 280px;
   color: @white;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
   margin: auto;
+
+  @media (min-width: 660px) {
+    font-size: 18px;
+  }
 }
