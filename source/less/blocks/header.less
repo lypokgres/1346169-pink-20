@@ -1,5 +1,14 @@
 .header {
   background-color: @gray;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 130px;
+    padding-left: 130px;
+  }
 }
 
 .nav {
@@ -15,12 +24,19 @@
 .nav__list {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1200px) {
+    width: 620px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .nav__item {
   list-style: none;
   text-align: center;
-  height: 63px;
 }
 
 .nav__link {
@@ -29,4 +45,11 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: 1200px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
+  }
 }
