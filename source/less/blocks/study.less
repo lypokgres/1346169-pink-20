@@ -1,0 +1,60 @@
+.study {
+  display: none;
+
+  @media (min-width: 660px) {
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+    background-color: @lightgray;
+  }
+}
+
+.study__item {
+  width: 310px;
+  margin-left: auto;
+
+  @media (min-width: 1200px) {
+    width: 534px;
+  }
+}
+
+.study__title {
+  width: 168px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+
+  @media (min-width: 1200px) {
+    width: auto;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.study__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: @gray;
+
+  @media (min-width: 1200px) {
+    width: auto;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.study__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: underline;
+  color: @pink;
+
+  @media (min-width: 1200px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
