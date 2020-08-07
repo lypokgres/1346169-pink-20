@@ -1,3 +1,37 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__name {
+  border: none;
+  padding: 0;
+  flex-basis: 100%;
+
+  @media (min-width: 1200px) {
+    flex-basis: 40%;
+  }
+}
+
+.form__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &--name {
+    @media (min-width: 660px) {
+      flex-direction: row;
+    }
+  }
+
+  &--contact {
+    @media (min-width: 660px) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
 .form__text-title {
   font-weight: 400;
   font-size: 14px;
@@ -12,6 +46,7 @@
   line-height: 30px;
   border: 2px solid @specialgray;
   border-radius: 3px;
+  flex-basis: 100%;
 
   &::placeholder {
     color: @gray;
@@ -19,7 +54,57 @@
 }
 
 .form__achievements {
-  background-color: @lightgray;
+  padding: 0;
+  order: 1;
+  flex-basis: 100%;
+
+  @media (max-width: 660px) {
+    background-color: @lightgray;
+    border: none;
+  }
+
+  @media (min-width: 660px) {
+    order: 3;
+  }
+}
+
+.form__achievements-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.form__contact {
+  padding: 0;
+  order: 2;
+  flex-basis: 100%;
+
+  @media (max-width: 660px) {
+    border: none;
+  }
+}
+
+.form__app {
+  padding: 0;
+  order: 3;
+  flex-basis: 100%;
+
+  @media (max-width: 660px) {
+    background-color: @lightgray;
+    border: none;
+  }
+
+  @media (min-width: 660px) {
+    order: 1;
+  }
+
+  @media (min-width: 1200px) {
+    flex-basis: 40%;
+  }
 }
 
 .form__section-title {
@@ -27,6 +112,7 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
   color: @pink;
 }
 
@@ -35,6 +121,16 @@
   font-size: 18px;
   line-height: 30px;
   color: @gray;
+}
+
+.form__feedback {
+  padding: 0;
+  order: 4;
+  flex-basis: 100%;
+
+  @media (max-width: 660px) {
+    border: none;
+  }
 }
 
 .form__message {
@@ -66,6 +162,14 @@
   line-height: 30px;
   text-transform: uppercase;
   color: @gray;
+}
+
+.form__push {
+  order: 5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
 }
 
 .form__star {

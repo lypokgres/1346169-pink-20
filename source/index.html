@@ -85,14 +85,14 @@
     </section>
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы о нашем приложении</h2>
-      <div class="reviews__wrapper slider">
-        <blockquote class="reviews__item slider__item">
-          <cite class="reviews__user-name">Николай Петров</cite>
+      <div class="container">
+        <blockquote class="reviews__item">
+          <cite class="reviews__author">Николай Петров<span class="reviews__about-author">25 лет, водитель трамвая</span></cite>
           <p class="reviews__text">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </blockquote>
-        <div class="reviews__toggles slider__toggles">
+        <div class="reviews__toggles slider-toggles">
           <button class="slider__toggle slider__toggle--current" type="button" aria-label="Первый слайд"></button>
           <button class="slider__toggle" type="button" aria-label="Второй слайд"></button>
           <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
@@ -100,58 +100,65 @@
       </div>
     </section>
     <section class="price">
-      <table class="price__table">
-        <tr>
-          <th class="price__plan">
-            <p class="price__name">База</p>
-            <p class="price__cost">1,99 usd</p>
-          </th>
-          <th class="price__plan">
-            <p class="price__name">Стандарт</p>
-            <p class="price__cost">3,99 usd</p>
-          </th>
-          <th class="price__plan">
-            <p class="price__name">Анлим</p>
-            <p class="price__cost">9,99 usd</p>
-          </th>
-        </tr>
-        <tr>
-          <td class="price__option price__option--yes">Розовый фильтр</td>
-          <td class="price__option price__option--yes">Розовый фильтр</td>
-          <td class="price__option price__option--yes">Розовый фильтр</td>
-        </tr>
-        <tr>
-          <td class="price__option price__option--no">Смайлики</td>
-          <td class="price__option price__option--yes">Смайлики</td>
-          <td class="price__option price__option--yes">Смайлики</td>
-        </tr>
-        <tr>
-          <td class="price__option price__option--no">Комментарии</td>
-          <td class="price__option price__option--no">Комментарии</td>
-          <td class="price__option price__option--yes">Комментарии</td>
-        </tr>
-      </table>
-      <div class="price__toggle slider__toggle">
-        <button class="slider__toggle" type="button" aria-label="Первый слайд"></button>
-        <button class="slider__toggle slider__toggle--current" type="button" aria-label="Второй слайд"></button>
-        <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
+      <div class="container">
+        <table class="price__table">
+          <tr>
+            <th class="price__plan">
+              <p class="price__name">База</p>
+              <p class="price__cost">1,99 usd</p>
+            </th>
+            <th class="price__plan">
+              <p class="price__name">Стандарт</p>
+              <p class="price__cost">3,99 usd</p>
+            </th>
+            <th class="price__plan">
+              <p class="price__name">Анлим</p>
+              <p class="price__cost">9,99 usd</p>
+            </th>
+          </tr>
+          <tr>
+            <td class="price__option price__option--additional">Розовый фильтр</td>
+            <td class="price__option price__option--yes"><p class="price__text">Розовый фильтр</p></td>
+            <td class="price__option price__option--yes"><p class="price__text">Розовый фильтр</p></td>
+            <td class="price__option price__option--yes"><p class="price__text">Розовый фильтр</p></td>
+          </tr>
+          <tr>
+            <td class="price__option price__option--additional">Смайлики</td>
+            <td class="price__option price__option--no"><p class="price__text">Смайлики</p></td>
+            <td class="price__option price__option--yes"><p class="price__text">Смайлики</p></td>
+            <td class="price__option price__option--yes"><p class="price__text">Смайлики</p></td>
+          </tr>
+          <tr>
+            <td class="price__option price__option--additional">Комментарии</td>
+            <td class="price__option price__option--no"><p class="price__text">Комментарии</p></td>
+            <td class="price__option price__option--no"><p class="price__text">Комментарии</p></td>
+            <td class="price__option price__option--yes"><p class="price__text">Комментарии</p></td>
+          </tr>
+        </table>
+        <div class="price__toggle slider-toggles">
+          <button class="slider__toggle" type="button" aria-label="Первый слайд"></button>
+          <button class="slider__toggle slider__toggle--current" type="button" aria-label="Второй слайд"></button>
+          <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
+        </div>
       </div>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="container">
         <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
-        <div class="contacts__item">
-          <p class="contacts__text">Звоните:</p>
-          <a class="contacts__phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </div>
-        <div class="contacts__item">
-          <p class="contacts__text">Пишите:</p>
-          <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
-        <div class="contacts__item">
-          <p class="contacts__text">Приезжайте в гости:</p>
-          <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
-        </div>
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item--phone">
+            <p class="contacts__text">Звоните:</p>
+            <a class="contacts__description" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <p class="contacts__text">Пишите:</p>
+            <a class="contacts__description" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+          <li class="contacts__item contacts__item--address">
+            <p class="contacts__text">Приезжайте в гости:</p>
+            <address class="contacts__description">ул. Большая Конюшенная, 19/8</address>
+          </li>
+        </ul>
       </div>
       <div class="contacts__map map">
         <img src="https://via.placeholder.com/320x200" width="320" height="200" alt="Офис компании по адресу ул. Большая Конюшенная, 19/8">
