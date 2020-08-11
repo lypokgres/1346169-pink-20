@@ -3,23 +3,19 @@
 }
 
 .page__body {
-  width: 320px;
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   margin: 0 auto;
 
-  @media (min-width: 660px) {
-    width: 660px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 1200px;
+  @media (max-width: 660px) {
+    width: 320px;
   }
 }
 
 .container {
+  outline: 1px solid red;
   width: 280px;
   margin: auto;
 
@@ -48,6 +44,7 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
