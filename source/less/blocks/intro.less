@@ -8,9 +8,12 @@
   position: relative;
   padding-top: 95px;
   
+  
 
   @media (min-width: 660px) {
     background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center 0;
+    padding-top: 212px;
   }
 
   @media (min-width: 1200px) {
@@ -18,13 +21,23 @@
   }
 
   &--form {
-    padding-top: 36px;
-    padding-bottom: 51px;
+    padding-top: 102px;
+
+    @media (min-width: 660px) {
+      padding-top: 191px;
+    }
   }
 
   &--photo {
-    padding-top: 36px;
-    padding-bottom: 84px;
+    padding-top: 102px;
+
+    @media (min-width: 660px) {
+      padding-top: 191px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-top: 184px;
+    }
   }
 
   .container {
@@ -43,7 +56,7 @@
 
 .intro__title {
   width: 280px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 310px;
   font-weight: 300;
   font-size: 24px;
@@ -51,8 +64,43 @@
   color: @white;
   text-align: center;
 
+  .intro--form & {
+    margin-bottom: 51px;
+    
+    @media (min-width: 660px) {
+      width: 510px;
+      margin-bottom: 74px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 940px;
+      margin-bottom: 104px;
+    }
+  }
+
+  .intro--photo & {
+    margin-bottom: 84px;
+
+    @media (min-width: 660px) {
+      margin-bottom: 143px;
+      width: 360px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 104px;
+    }
+  }
+
   @media (min-width: 660px) {
     font-size: 40px;
     margin-bottom: 39px;
+    width: 240px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 41px;
   }
 }
+

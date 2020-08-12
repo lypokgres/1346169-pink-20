@@ -8,26 +8,34 @@
   </head>
   <body class="page__body page__body--photo">
     <header class="header">
-      <a href="" class="header__logo">
-        <img src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип сайта Pink">
-      </a>
-      <nav class="nav">
-        <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="form.html">Конкурс</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="" class="header__logo">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сайта Pink">
+            </picture>
+          </a>
+          <button class="hader__button hader__button--cross" type="button" aria-label="Открыть меню"></button>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main">
       <h1 class="visually-hidden">Страница фотогалереи</h1>
