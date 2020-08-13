@@ -1,7 +1,3 @@
-.gallery {
-  padding-top: 54px;
-}
-
 .gallery__description {
   width: 250px;
   font-weight: 400;
@@ -20,30 +16,80 @@
 }
 
 .gallery__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: 660px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 54px;
+  }
 }
 
 .gallery__item {
-  width: 280px;
-  min-height: 324px;
+  position: relative;
   background-color: @lightgray;
-  margin: 0;
-  margin-bottom: 20px;
+}
+
+.gallery__item--panorama {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding-top: 137px;
+
+  .gallery__img {
+    width: 320px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+  }
 
   @media (min-width: 660px) {
-    width: 300px;
+    padding-top: 480px;
 
-    &:first-child {
-      flex-basis: 100%;
+    .gallery__img {
+      width: 660px;
+    }
+
+    .gallery__button {
+      flex-basis: auto;
+      align-self: flex-start;
+      padding-right: 29px;
+      order: 0;
+
+      svg {
+        left: 105px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 506px;
+    .gallery__img {
+      width: 1200px;
+      left: -130px;
     }
   }
 }
 
 .gallery__img {
-  margin-bottom: 25px;
+  display: block;
+}
+
+.gallery__post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: auto;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 17px;
+  padding-right: 30px;
 }
 
 .gallery__author {
@@ -53,7 +99,6 @@
   font-size: 14px;
   line-height: 24px;
   color: @gray;
-  margin-bottom: 14px;
 }
 
 .gallery__time {
@@ -65,14 +110,22 @@
 }
 
 .gallery__message {
+  flex-basis: 100%;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: @gray;
   margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  order: 1;
 }
 
 .gallery__button {
+  position: relative;
+  align-self: flex-end;
+  text-align: start;
+  flex-basis: 100%;
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;
@@ -80,5 +133,21 @@
   color: @pink;
   border: none;
   padding: 0;
-  padding-left: 48px;
+  padding-left: 31px;
+  order: 2;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    fill: @pink;
+  }
+
+  @media (min-width: 660px) {
+    padding-left: 0;
+
+    svg {
+      left: 240px;
+    }
+  }
 }
