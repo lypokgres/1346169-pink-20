@@ -1,5 +1,7 @@
 .study {
   display: none;
+  padding-top: 102px;
+  padding-bottom: 29px;
 
   @media (min-width: 660px) {
     display: block;
@@ -7,15 +9,59 @@
 
   @media (min-width: 1200px) {
     background-color: @lightgray;
+    padding-top: 115px;
+    padding-bottom: 120px;
+  }
+}
+
+.study__img {
+  display: block;
+  width: 238px;
+  height: 276px;
+  fill: @specialgray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: 1200px) {
+    width: 298px;
+    height: 345px;
+    bottom: -60px;
   }
 }
 
 .study__item {
-  width: 310px;
-  margin-left: auto;
+  padding-left: 310px;
+
+  &::before {
+    content: "24";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 16px solid @pink;
+    border-radius: 50%;
+    bottom: 18px;
+    left: 18px;
+    z-index: 1;
+    text-align: center;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 160px;
+    color: @pink;
+
+    @media (min-width: 1200px) {
+      width: 220px;
+      height: 220px;
+      border: 18px solid @pink;
+      font-size: 120px;
+      line-height: 200px;
+      bottom: -40px;
+      left: 20px;
+    }
+  }
 
   @media (min-width: 1200px) {
-    width: 534px;
+    padding-left: 370px;
   }
 }
 
