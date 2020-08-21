@@ -6,10 +6,16 @@
   color: @gray;
   text-align: center;
   margin: auto;
+  margin-bottom: 52px;
 
   @media (min-width: 660px) {
     font-size: 18px;
     width: 422px;
+    margin-bottom: 78px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 75px;
   }
 }
 
@@ -25,9 +31,10 @@
   box-sizing: border-box;
 
   @media (min-width: 660px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     flex-direction: row;
+    width: 660px;
   }
 
   @media (min-width: 1200px) {
@@ -39,6 +46,12 @@
 
 .upload__img {
   display: block;
+  margin-bottom: 42px;
+
+  @media (min-width: 660px) {
+    width: 300px;
+    height: 400px;
+  }
 }
 
 .upload__controls {
@@ -53,7 +66,8 @@
 
   @media (min-width: 1200px) {
     flex-direction: row;
-    width: 400px;
+    justify-content: space-between;
+    width: 410px;
   }
 }
 
@@ -75,4 +89,162 @@
     color: @gray;
     opacity: 0.1;
   }
+
+  @media (min-width: 1200px) {
+    width: 183px;
+  }
+}
+
+.upload__settings {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-bottom: 38px;
+
+  @media (min-width: 660px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 275px;
+    padding: 0;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 410px;
+    margin-bottom: 140px;
+  }
+}
+
+.upload__range {
+  margin-right: 35px;
+
+  svg {
+    fill: fade(@gray, 30%);
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &--active {
+    .upload__scale {
+      display: block;
+    }
+
+    svg {
+      fill: @pink;
+    }
+  }
+
+  @media (min-width: 660px) {
+    box-sizing: border-box;
+    border-bottom: 1px solid fade(@gray, 10%);
+    width: 100%;
+    height: 69px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 18px;
+    margin: 0;
+  }
+
+  @media (min-width: 1200px) {
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.upload__range--crop {
+  @media (min-width: 660px) {
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: @pink;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    svg {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+.upload__range--fill {
+  .upload__toggle {
+    left: 30px;
+  }
+
+  @media (min-width: 660px) {
+    svg {
+      width: 24px;
+      height: 22px;
+      fill: @pink;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    svg {
+      width: 48px;
+      height: 43px;
+    }
+  }
+}
+
+.upload__range--contrast {
+  .upload__toggle {
+    left: 110px;
+  }
+
+  @media (min-width: 660px) {
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: @pink;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.upload__scale {
+  display: none;
+  width: 240px;
+  height: 2px;
+  background-color: @black;
+  position: absolute;
+  bottom: 34px;
+  right: 20px;
+
+  @media (min-width: 660px) {
+    display: block;
+    position: relative;
+    width: 202px;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (min-width: 1200px) {
+    width: 288px;
+  }
+}
+
+.upload__toggle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid @pink;
+  border-radius: 50%;
+  background-color: @white;
+  bottom: -7px;
+  right: 30px;
 }
