@@ -7,17 +7,18 @@
   background-color: @gray;
   position: relative;
   padding-top: 21px;
-  margin-bottom: -66px;
+  margin-bottom: -73px;
   z-index: 1;
 
   .container {
     display: contents;
 
     @media (min-width: 1200px) {
+      height: 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 42px;
+      margin-bottom: 32px;
     }
   }
 
@@ -31,6 +32,7 @@
     justify-content: space-between;
     padding-right: 130px;
     padding-left: 130px;
+    background-color: fade(@black, 30%);
   }
 }
 
@@ -41,10 +43,12 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 21px;
+  padding-bottom: 5px;
 
   @media (min-width: 660px) {
     width: 620px;
     margin-bottom: 42px;
+    padding-bottom: 0;
   }
 
   @media (min-width: 1200px) {
@@ -145,7 +149,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  padding: 15px 0;
+  padding: 16px 0;
 
   @media (min-width: 1200px) {
     font-weight: 400;

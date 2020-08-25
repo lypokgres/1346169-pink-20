@@ -1,29 +1,25 @@
-.gallery {
-  margin-bottom: 49px;
-
-  @media (min-width: 660px) {
-    margin-bottom: 73px;
-  }
-
-  @media (min-width: 1200px) {
-    margin-bottom: 67px;
-  }
-}
-
 .gallery__description {
   width: 250px;
+  padding-top: 44px;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   color: @gray;
   text-align: center;
   margin: auto;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 
   @media (min-width: 660px) {
     width: 550px;
+    padding-top: 91px;
     font-size: 18px;
     line-height: 30px;
+    margin-bottom: 77px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 630px;
+    margin-bottom: 89px;
   }
 }
 
@@ -38,71 +34,40 @@
 
   @media (min-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 54px;
+    row-gap: 50px;
   }
 }
 
 .gallery__item {
   position: relative;
   background-color: @lightgray;
-}
-
-.gallery__item--panorama {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  padding-top: 137px;
-
-  .gallery__img {
-    width: 320px;
-    position: absolute;
-    top: 0;
-    left: -20px;
-  }
-
-  @media (min-width: 660px) {
-    padding-top: 480px;
-
-    .gallery__img {
-      width: 660px;
-    }
-
-    .gallery__button {
-      flex-basis: auto;
-      align-self: flex-start;
-      padding-right: 29px;
-      order: 0;
-
-      svg {
-        left: 105px;
-      }
-    }
-  }
 
   @media (min-width: 1200px) {
-    padding-top: 506px;
-
-    .gallery__img {
-      width: 1200px;
-      left: -130px;
-    }
+    margin-bottom: 4px;
   }
 }
 
 .gallery__img {
   display: block;
+  margin-bottom: 17px;
+
+  @media (min-width: 660px) {
+    margin-bottom: 22px;
+  }
 }
 
 .gallery__post {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: auto;
+  position: relative;
   margin: 0;
-  padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 17px;
-  padding-right: 30px;
+  min-height: 84px;
+
+  @media (min-width: 660px) {
+    padding-left: 30px;
+    padding-right: 20px;
+    min-height: 113px;
+  }
 }
 
 .gallery__author {
@@ -118,6 +83,7 @@
   font-weight: 300;
   font-size: 12px;
   line-height: 24px;
+  text-transform: uppercase;
   color: @gray;
   padding-left: 3px;
 }
@@ -131,36 +97,129 @@
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
-  order: 1;
+
+  @media (min-width: 660px) {
+    margin-bottom: 5px;
+  }
 }
 
 .gallery__button {
-  position: relative;
-  align-self: flex-end;
-  text-align: start;
-  flex-basis: 100%;
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
   color: @pink;
+  background-color: transparent;
   border: none;
   padding: 0;
-  padding-left: 31px;
-  order: 2;
+  bottom: 23px;
 
   svg {
-    position: absolute;
     left: 0;
     top: 6px;
     fill: @pink;
+    padding-right: 15px;
+
+    @media (min-width: 660px) {
+      position: absolute;
+      left: 228px;
+      padding: 0;
+    }
   }
 
   @media (min-width: 660px) {
+    position: absolute;
     padding-left: 0;
+  }
+}
 
-    svg {
-      left: 240px;
+.gallery__item--panorama {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding-top: 154px;
+
+  .gallery__img {
+    width: 320px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+  }
+
+  &::before {
+    content: "Панорама дня";
+    position: absolute;
+    width: 140px;
+    height: 31px;
+    color: @white;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    background-color: @pink;
+    padding-top: 5px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  @media (min-width: 660px) {
+    padding-top: 532px;
+    margin-bottom: 30px;
+
+    br {
+      display: none;
+    }
+
+    .gallery__img {
+      width: 700px;
+      left: -40px;
+    }
+
+    .gallery__post {
+      min-height: 78px;
+    }
+
+    .gallery__button {
+      top: -47px;
+      right: 60px;
+
+      svg {
+        left: 106px;
+        top: 54px;
+      }
+    }
+
+    &::before {
+      top: 57px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 528px;
+    margin-bottom: 0;
+
+    .gallery__post {
+      min-height: 54px;
+    }
+
+    .gallery__img {
+      width: 1200px;
+      left: -130px;
+    }
+
+    .gallery__button {
+      top: -24px;
+
+      svg {
+        top: 32px;
+      }
+    }
+
+    &::before {
+      top: 54px;
     }
   }
 }

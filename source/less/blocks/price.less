@@ -2,14 +2,15 @@
   position: relative;
   overflow: hidden;
   background-color: @lightgray;
-  padding-top: 127px;
-  padding-bottom: 400px;
+  padding-top: 100px;
+  padding-bottom: 380px;
 
   @media (min-width: 660px) {
     padding-bottom: 70px;
   }
 
   @media (min-width: 1200px) {
+    padding-top: 157px;
     padding-bottom: 98px;
   }
 
@@ -18,17 +19,17 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-bottom: 30px solid @lightgray;
+    border-bottom: 18px solid @lightgray;
     border-left: 320px solid @white;
     top: 0;
 
     @media (min-width: 660px) {
-      border-bottom: 60px solid @lightgray;
+      border-bottom: 41px solid @lightgray;
       border-left: 100vw solid @white;
     }
 
     @media (min-width: 1200px) {
-      border-bottom: 120px solid @lightgray;
+      border-bottom: 100px solid @lightgray;
       border-left: 100vw solid @white;
     }
   }
@@ -69,16 +70,30 @@
       content: "Хит";
       position: absolute;
       width: 100px;
-      height: 25px;
+      height: 18px;
       background-color: @pink;
       color: @white;
       font-weight: 400;
       font-size: 14px;
       text-transform: uppercase;
       transform: rotate(-45deg);
-      top: 10px;
-      left: -25px;
+      top: 14px;
+      left: -29px;
+
+      @media (min-width: 1200px) {
+        height: 22px;
+        top: 18px;
+        left: -22px;
+      }
     }
+  }
+
+  @media (min-width: 660px) {
+    height: 74px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 94px;
   }
 }
 
@@ -88,6 +103,10 @@
   text-transform: uppercase;
   color: @white;
   margin: 0;
+
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
 }
 
 .price__cost {
@@ -97,11 +116,14 @@
   text-transform: uppercase;
   color: @white;
   margin: 0;
+
+  @media (min-width: 1200px) {
+    font-size: 24px;
+  }
 }
 
 .price__option {
   position: relative;
-  min-width: 260px;
   height: 59px;
   font-weight: 400;
   font-size: 14px;
@@ -112,8 +134,19 @@
   padding-left: 20px;
   border: 3px solid @specialgray;
 
+  @media (max-width: 659px) {
+    min-width: 260px;
+  }
+
   @media (min-width: 660px) {
-    min-width: 153px;
+    width: 25%;
+    height: 41px;
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 25%;
+    font-size: 18px;
+    height: 55px;
   }
 
   &--additional {
@@ -139,8 +172,13 @@
   height: 31px;
 
   @media (min-width: 660px) {
-    right: 50%;
-    left: 50%;
+    right: 60px;
+    top: 8px;
+  }
+
+  @media (min-width: 1200px) {
+    right: 99px;
+    top: 14px;
   }
 
   &--yes {
@@ -201,8 +239,8 @@
 .price__toggle {
   width: 90px;
   position: absolute;
-  right: 90px;
-  bottom: -350px;
+  right: 85px;
+  bottom: -335px;
 
   @media (min-width: 660px) {
     display: none;
