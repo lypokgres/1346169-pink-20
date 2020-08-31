@@ -1,5 +1,19 @@
 .competition {
-  padding-top: 54px;
+  padding-top: 44px;
+
+  @media (max-width: 659px) {
+    width: 320px;
+  }
+
+  @media (min-width: 660px) {
+    padding-top: 92px;
+  }
+
+  .container {
+    @media (max-width: 659px) {
+      display: contents;
+    }
+  }
 }
 
 .competition__description {
@@ -10,9 +24,9 @@
   color: @gray;
   margin: auto;
   text-align: center;
-  margin-bottom: 55px;
+  margin-bottom: 34px;
 
-  @media (max-width: 660px) {
+  @media (max-width: 659px) {
     span {
       display: none;
     }
@@ -21,9 +35,11 @@
   @media (min-width: 660px) {
     font-size: 18px;
     width: 490px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: 1200px) {
     width: 756px;
+    margin-bottom: 70px;
   }
 }

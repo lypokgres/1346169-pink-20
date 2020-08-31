@@ -7,23 +7,28 @@
   align-items: center;
   position: relative;
   padding-top: 95px;
-  margin-bottom: 46px;
 
   @media (min-width: 660px) {
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: center 0;
-    padding-top: 212px;
+    padding-top: 203px;
   }
 
   @media (min-width: 1200px) {
     background-image: url("../img/bg-back-desktop@1x.jpg");
+    padding-top: 210px;
+    padding-bottom: 10px;
   }
 
   &--form {
-    padding-top: 102px;
+    padding-top: 100px;
 
     @media (min-width: 660px) {
-      padding-top: 191px;
+      padding-top: 178px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-top: 169px;
     }
   }
 
@@ -31,11 +36,11 @@
     padding-top: 102px;
 
     @media (min-width: 660px) {
-      padding-top: 191px;
+      padding-top: 176px;
     }
 
     @media (min-width: 1200px) {
-      padding-top: 184px;
+      padding-top: 169px;
     }
   }
 
@@ -48,6 +53,7 @@
 
 .intro__wrapper {
   width: 300px;
+  padding: 0;
 
   @media (max-width: 659px) {
     display: contents;
@@ -57,49 +63,55 @@
 .intro__title {
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 310px;
+  margin-bottom: 315px;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
   color: @white;
   text-align: center;
 
-  .intro--form & {
-    margin-bottom: 51px;
-
-    @media (min-width: 660px) {
-      width: 510px;
-      margin-bottom: 74px;
-    }
-
-    @media (min-width: 1200px) {
-      width: 940px;
-      margin-bottom: 104px;
-    }
-  }
-
-  .intro--photo & {
-    margin-bottom: 84px;
-
-    @media (min-width: 660px) {
-      margin-bottom: 143px;
-      width: 360px;
-    }
-
-    @media (min-width: 1200px) {
-      margin-bottom: 104px;
-    }
-  }
-
   @media (min-width: 660px) {
     font-size: 40px;
-    margin-bottom: 39px;
+    margin-bottom: 31px;
     width: 240px;
   }
 
   @media (min-width: 1200px) {
     font-size: 50px;
     line-height: 68px;
-    margin-bottom: 41px;
+    margin-bottom: 35px;
+  }
+
+  .intro--form & {
+    margin-bottom: 44px;
+    line-height: 33px;
+
+    @media (min-width: 660px) {
+      font-size: 50px;
+      line-height: 68px;
+      width: 510px;
+      margin-bottom: 58px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 940px;
+      margin-bottom: 79px;
+    }
+  }
+
+  .intro--photo & {
+    margin-bottom: 75px;
+    line-height: 33px;
+
+    @media (min-width: 660px) {
+      font-size: 50px;
+      line-height: 68px;
+      margin-bottom: 128px;
+      width: 360px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 79px;
+    }
   }
 }

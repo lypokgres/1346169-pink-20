@@ -1,3 +1,9 @@
+.upload {
+  @media (min-width: 1200px) {
+    margin-bottom: 35px;
+  }
+}
+
 .upload__description {
   width: 280px;
   font-weight: 400;
@@ -6,10 +12,19 @@
   color: @gray;
   text-align: center;
   margin: auto;
+  margin-bottom: 42px;
+  padding-top: 39px;
 
   @media (min-width: 660px) {
     font-size: 18px;
     width: 422px;
+    padding-top: 64px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 54px;
+    margin-bottom: 67px;
   }
 }
 
@@ -23,22 +38,217 @@
   padding-right: 20px;
   margin: 0 auto;
   box-sizing: border-box;
+  margin-bottom: 5px;
 
   @media (min-width: 660px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-top: 41px;
+    padding-left: 20px;
+    padding-right: 20px;
     flex-direction: row;
+    width: 660px;
   }
 
   @media (min-width: 1200px) {
     padding-left: 80px;
     padding-right: 60px;
+    padding-bottom: 4px;
     width: 940px;
   }
 }
 
 .upload__img {
   display: block;
+  margin-bottom: 42px;
+
+  @media (min-width: 660px) {
+    margin-top: 16px;
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.upload__settings {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 83px;
+  padding-bottom: 34px;
+  padding-left: 20px;
+  margin-bottom: 39px;
+
+  @media (min-width: 660px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 275px;
+    padding: 0;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 410px;
+    margin-bottom: 145px;
+  }
+}
+
+.upload__range {
+  position: relative;
+
+  svg {
+    padding-left: 35px;
+    fill: fade(@gray, 30%);
+  }
+
+  &--active {
+    .upload__scale {
+      display: block;
+    }
+
+    svg {
+      fill: @pink;
+    }
+  }
+
+  @media (min-width: 660px) {
+    box-sizing: border-box;
+    border-bottom: 1px solid fade(@gray, 10%);
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 55px;
+    margin: 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 92px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.upload__icon {
+  position: absolute;
+}
+
+.upload__range--crop {
+  .upload__icon {
+    left: -18px;
+    bottom: 41px;
+  }
+
+  @media (min-width: 660px) {
+    .upload__icon {
+      left: -31px;
+      bottom: 24px;
+      width: 22px;
+      height: 22px;
+      fill: @pink;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .upload__icon {
+      left: -35px;
+      bottom: 13px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+.upload__range--fill {
+  .upload__toggle {
+    left: 30px;
+  }
+
+  .upload__icon {
+    left: -179px;
+    bottom: 37px;
+  }
+
+  @media (min-width: 660px) {
+    .upload__icon {
+      left: -32px;
+      top: 29px;
+      width: 24px;
+      height: 22px;
+      fill: @pink;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .upload__icon {
+      left: -35px;
+      top: 19px;
+      width: 48px;
+      height: 43px;
+    }
+  }
+}
+
+.upload__range--contrast {
+  .upload__toggle {
+    left: 110px;
+  }
+
+  .upload__icon {
+    left: -96px;
+    bottom: 46px;
+  }
+
+  @media (min-width: 660px) {
+    .upload__icon {
+      left: -28px;
+      top: 27px;
+      width: 16px;
+      height: 16px;
+      fill: @pink;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .upload__icon {
+      left: -28px;
+      top: 19px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.upload__scale {
+  display: none;
+  width: 240px;
+  height: 2px;
+  background-color: @black;
+  bottom: 39px;
+  right: 20px;
+
+  @media (min-width: 660px) {
+    display: block;
+    position: relative;
+    width: 202px;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (min-width: 1200px) {
+    width: 288px;
+  }
+}
+
+.upload__toggle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid @pink;
+  border-radius: 50%;
+  background-color: @white;
+  bottom: -7px;
+  right: 33px;
 }
 
 .upload__controls {
@@ -46,14 +256,16 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 280px;
+  padding-bottom: 29px;
 
   @media (min-width: 660px) {
-    width: 260px;
+    width: 262px;
   }
 
   @media (min-width: 1200px) {
     flex-direction: row;
-    width: 400px;
+    justify-content: space-between;
+    width: 410px;
   }
 }
 
@@ -74,5 +286,13 @@
     border-color: @gray;
     color: @gray;
     opacity: 0.1;
+  }
+
+  @media (min-width: 660px) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 183px;
   }
 }

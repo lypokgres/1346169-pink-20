@@ -1,27 +1,99 @@
 .price {
   position: relative;
   overflow: hidden;
-  min-height: 385px;
   background-color: @lightgray;
+  padding-top: 100px;
+  padding-bottom: 380px;
+
+  @media (min-width: 660px) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 157px;
+    padding-bottom: 98px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 18px solid @lightgray;
+    border-left: 320px solid @white;
+    top: 0;
+
+    @media (min-width: 660px) {
+      border-bottom: 41px solid @lightgray;
+      border-left: 100vw solid @white;
+    }
+
+    @media (min-width: 1200px) {
+      border-bottom: 100px solid @lightgray;
+      border-left: 100vw solid @white;
+    }
+  }
 }
 
 .price__table {
+  width: 100%;
   border-collapse: collapse;
-  top: 50px;
 
-  @media (max-width: 660px) {
+  @media (max-width: 659px) {
     position: absolute;
-    left: -267px;
+    left: -287px;
+
+    th:first-child {
+      display: none;
+    }
   }
 }
 
 .price__plan {
+  overflow: hidden;
+  position: relative;
   height: 94px;
   background-color: @gray;
   border-left: 3px solid @white;
+  border-bottom: 3px solid @gray;
 
-  @media (max-width: 660px) {
-    min-width: 280px;
+  &:nth-child(2) {
+    border-left: 3px solid @gray;
+  }
+
+  &:last-child {
+    border-right: 3px solid @gray;
+  }
+
+  &--hit {
+    &::before {
+      content: "Хит";
+      position: absolute;
+      width: 100px;
+      height: 18px;
+      background-color: @pink;
+      color: @white;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+      transform: rotate(-45deg);
+      top: 14px;
+      left: -29px;
+
+      @media (min-width: 1200px) {
+        height: 22px;
+        top: 18px;
+        left: -22px;
+      }
+    }
+  }
+
+  @media (min-width: 660px) {
+    height: 74px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 94px;
   }
 }
 
@@ -31,6 +103,10 @@
   text-transform: uppercase;
   color: @white;
   margin: 0;
+
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
 }
 
 .price__cost {
@@ -40,9 +116,14 @@
   text-transform: uppercase;
   color: @white;
   margin: 0;
+
+  @media (min-width: 1200px) {
+    font-size: 24px;
+  }
 }
 
 .price__option {
+  position: relative;
   height: 59px;
   font-weight: 400;
   font-size: 14px;
@@ -53,9 +134,115 @@
   padding-left: 20px;
   border: 3px solid @specialgray;
 
+  @media (max-width: 659px) {
+    min-width: 260px;
+  }
+
+  @media (min-width: 660px) {
+    width: 25%;
+    height: 41px;
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 25%;
+    font-size: 18px;
+    height: 55px;
+  }
+
   &--additional {
-    @media (max-width: 660px) {
+    text-transform: none;
+
+    @media (max-width: 659px) {
       display: none;
     }
+  }
+}
+
+.price__text {
+  @media (min-width: 660px) {
+    display: none;
+  }
+}
+
+.price__check {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  width: 31px;
+  height: 31px;
+
+  @media (min-width: 660px) {
+    right: 60px;
+    top: 8px;
+  }
+
+  @media (min-width: 1200px) {
+    right: 99px;
+    top: 14px;
+  }
+
+  &--yes {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 15px;
+      transform: rotate(-45deg);
+      background-color: @check-green;
+      border-radius: 50px;
+      right: 24px;
+      top: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 29px;
+      transform: rotate(45deg);
+      background-color: @check-green;
+      border-radius: 50px;
+      right: 10px;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &--no {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 37px;
+      transform: rotate(-45deg);
+      background-color: @cross-red;
+      border-radius: 50px;
+      right: 14px;
+      top: -3px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 37px;
+      transform: rotate(45deg);
+      background-color: @cross-red;
+      border-radius: 50px;
+      right: 14px;
+      top: -3px;
+      z-index: 1;
+    }
+  }
+}
+
+.price__toggle {
+  width: 90px;
+  position: absolute;
+  right: 85px;
+  bottom: -335px;
+
+  @media (min-width: 660px) {
+    display: none;
   }
 }
