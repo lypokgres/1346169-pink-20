@@ -81,6 +81,15 @@
   min-height: 59px;
   flex-basis: 100%;
 
+  &:hover {
+    border: 2px solid @gray;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @pink;
+  }
+
   &::placeholder {
     color: @gray;
     opacity: 1;
@@ -141,6 +150,18 @@
 }
 
 .form__checkbox + label {
+  &:hover {
+    &::before {
+      border: 2px solid @gray;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: 2px solid @pink;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -320,6 +341,18 @@
 }
 
 .form__radio + label {
+  &:hover {
+    &::before {
+      border: 2px solid @gray;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: 2px solid @pink;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -424,6 +457,15 @@
   border: 2px solid @specialgray;
   border-radius: 3px;
 
+  &:hover {
+    border: 2px solid @gray;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @pink;
+  }
+
   &::placeholder {
     color: @gray;
     opacity: 1;
@@ -447,6 +489,19 @@
   border-radius: 2px;
   background-color: @button-green;
   margin-bottom: 19px;
+
+  &:hover {
+    background-color: @button-darkgreen;
+  }
+
+  &:active {
+    background-color: @button-darkgreen;
+    color: fade(@white, 30%);
+  }
+
+  &--disabled {
+    background-color: @specialgray;
+  }
 
   @media (min-width: 660px) {
     width: 300px;

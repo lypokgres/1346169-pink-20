@@ -108,6 +108,14 @@
     }
   }
 
+  @media (max-width: 659px) {
+    svg {
+      &:hover {
+        fill: fade(@gray, 50%);
+      }
+    }
+  }
+
   @media (min-width: 660px) {
     box-sizing: border-box;
     border-bottom: 1px solid fade(@gray, 10%);
@@ -249,6 +257,11 @@
   background-color: @white;
   bottom: -7px;
   right: 33px;
+  cursor: pointer;
+
+  &:active {
+    background-color: @pink;
+  }
 }
 
 .upload__controls {
@@ -281,11 +294,35 @@
   color: @pink;
   margin-bottom: 12px;
   align-self: flex-end;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: @white;
+    background-color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @pink;
+  }
 
   &--cancel {
     border-color: @gray;
     color: @gray;
     opacity: 0.1;
+
+    &:hover {
+      color: @gray;
+      opacity: 0.3;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: @white;
+      opacity: 0.3;
+      background-color: @gray;
+    }
   }
 
   @media (min-width: 660px) {
