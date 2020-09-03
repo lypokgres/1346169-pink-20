@@ -22,12 +22,28 @@
   display: block;
   margin-bottom: 32px;
 
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
   @media (min-width: 660px) {
     margin: 0;
   }
 
   @media (min-width: 1200px) {
     margin-right: 12px;
+
+    .footer__logo-glasses-tablet {
+      display: none;
+    }
+
+    .footer__logo-glasses-desktop {
+      display: block;
+    }
   }
 }
 

@@ -161,12 +161,22 @@
 }
 
 .header__logo {
+  position: relative;
   display: block;
+  width: 74px;
+  height: 23px;
 
-  img {
-    @media (min-width: 660px) {
-      width: 145px;
-      height: 40px;
-    }
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active path {
+    fill: @white;
+    opacity: 0.3;
+  }
+
+  @media (min-width: 660px) {
+    width: 145px;
+    height: 40px;
   }
 }
