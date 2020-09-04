@@ -23,12 +23,22 @@
     top: -286px;
     left: 0;
 
+    @media (min-resolution: 2dppx) {
+      background: url("../img/iphone-hand-mobile@2x.png") no-repeat;
+      background-size: 258px auto;
+    }
+
     @media (min-width: 660px) {
       width: 660px;
       height: 545px;
       background: url("../img/iphone-hand-tablet@1x.png");
       left: -40px;
       top: -194px;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/iphone-hand-tablet@2x.png") no-repeat;
+        background-size: 700px auto;
+      }
     }
 
     @media (min-width: 1200px) {
@@ -37,6 +47,11 @@
       background: url("../img/iphone-hand-desktop@1x.png");
       left: 15px;
       top: -241px;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/iphone-hand-desktop@2x.png") no-repeat;
+        background-size: 1050px auto;
+      }
     }
   }
 }
