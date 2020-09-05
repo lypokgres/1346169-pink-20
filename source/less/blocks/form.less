@@ -9,7 +9,7 @@
   border: none;
   flex-basis: 100%;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   @media (min-width: 660px) {
     padding: 0;
@@ -18,6 +18,7 @@
 
   @media (min-width: 1200px) {
     padding-top: 15px;
+    margin-bottom: 0;
     flex-basis: 46%;
     display: flex;
     flex-direction: column;
@@ -28,7 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 
   &--name {
     @media (min-width: 660px) {
@@ -62,7 +63,7 @@
   text-transform: uppercase;
   color: @pink;
   padding-left: 21px;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 
   @media (min-width: 660px) {
     padding-left: 0;
@@ -71,6 +72,7 @@
 }
 
 .form__text-input {
+  box-sizing: border-box;
   position: relative;
   font-weight: 400;
   font-size: 18px;
@@ -78,8 +80,12 @@
   border: 2px solid @specialgray;
   border-radius: 3px;
   padding: 0 20px;
-  min-height: 59px;
-  flex-basis: 100%;
+  min-height: 63px;
+  width: 100%;
+
+  @media (min-width: 660px) {
+    flex-basis: 100%;
+  }
 
   &:hover {
     border: 2px solid @gray;
@@ -98,7 +104,6 @@
 
 .form__achievements {
   position: relative;
-  box-sizing: border-box;
   padding: 0 20px;
   order: 1;
   flex-basis: 100%;
@@ -107,7 +112,7 @@
   border-radius: 3px;
 
   @media (max-width: 659px) {
-    padding-top: 117px;
+    padding-top: 115px;
     background-color: @lightgray;
     border: none;
   }
@@ -191,8 +196,8 @@
 
 .form__contact {
   padding: 0 20px;
-  padding-top: 29px;
-  padding-bottom: 30px;
+  padding-top: 31px;
+  padding-bottom: 26px;
   order: 2;
   flex-basis: 100%;
   margin: 0;
@@ -210,7 +215,7 @@
   @media (min-width: 660px) {
     padding: 0 60px;
     padding-top: 36px;
-    margin-bottom: 55px;
+    margin-bottom: 59px;
 
     .form__text-input {
       margin-bottom: 10px;
@@ -224,7 +229,7 @@
   @media (min-width: 1200px) {
     padding-top: 31px;
     padding-bottom: 0;
-    margin-bottom: 56px;
+    margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -317,6 +322,7 @@
     padding: 0;
     padding-top: 50px;
     padding-bottom: 14px;
+    margin-bottom: 58px;
     flex-basis: inherit;
     width: 431px;
   }
