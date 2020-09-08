@@ -22,12 +22,28 @@
   display: block;
   margin-bottom: 32px;
 
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+
   @media (min-width: 660px) {
     margin: 0;
   }
 
   @media (min-width: 1200px) {
     margin-right: 12px;
+
+    .footer__logo-glasses-tablet {
+      display: none;
+    }
+
+    .footer__logo-glasses-desktop {
+      display: block;
+    }
   }
 }
 
@@ -50,9 +66,21 @@
   display: flex;
   width: 47px;
   height: 47px;
-  border: 3px solid @specialgray;
+  border: 3px solid fade(@gray, 10%);
   border-radius: 50px;
   background-position: center;
+
+  &:hover {
+    border: 3px solid @gray;
+  }
+
+  &:active {
+    border: 3px solid fade(@gray, 10%);
+
+    svg {
+      opacity: 0.3;
+    }
+  }
 
   svg {
     display: block;
@@ -80,4 +108,12 @@
 
 .copyright__link {
   fill: @pink;
+
+  &:hover {
+    fill: @gray;
+  }
+
+  &:active {
+    fill: fade(@gray, 30%);
+  }
 }

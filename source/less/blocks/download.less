@@ -70,6 +70,15 @@
   margin: auto;
   margin-bottom: 32px;
 
+  &:hover {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+  }
+
   @media (min-width: 660px) {
     margin-bottom: 42px;
   }

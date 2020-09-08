@@ -1,0 +1,149 @@
+.modal-form {
+  display: none;
+  position: fixed;
+  width: 320px;
+  min-height: 360px;
+  padding-top: 44px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 50%;
+  margin: auto auto;
+  z-index: 2;
+  background-color: @white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  border-radius: 1px;
+
+  &--unsuccessful {
+    min-height: 270px;
+  }
+
+  @media (min-width: 660px) {
+    padding-top: 49px;
+    width: 460px;
+    min-height: 410px;
+
+    &--unsuccessful {
+      min-height: 340px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 780px;
+    min-height: 356px;
+  }
+}
+
+.modal-form__title {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 37px;
+
+  @media (min-width: 660px) {
+    width: 300px;
+    font-size: 30px;
+    line-height: 40px;
+
+    &--unsuccessful {
+      width: 260px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 396px;
+  }
+}
+
+.modal-form__text {
+  font-size: 14px;
+  line-height: 24px;
+  color: @gray;
+  width: 265px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 41px;
+
+  &--unsuccessful {
+    width: 280px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 660px) {
+    width: 330px;
+    font-size: 18px;
+    margin-bottom: 35px;
+
+    &--unsuccessful {
+      margin-bottom: 40px;
+      width: 310px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 378px;
+    margin-bottom: 44px;
+
+    &--unsuccessful {
+      margin-bottom: 68px;
+    }
+  }
+}
+
+.modal-form__wrapper-button {
+  background-color: @lightgray;
+  padding: 52px 0;
+
+  &--unsuccessful {
+    padding-top: 0;
+    background-color: transparent;
+  }
+
+  @media (min-width: 1200px) {
+    &--unsuccessful {
+      padding-top: 52px;
+      background-color: @lightgray;
+    }
+  }
+}
+
+.modal-form__button {
+  display: block;
+  width: 276px;
+  min-height: 59px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @white;
+  border: none;
+  border-radius: 2px;
+  background-color: @button-green;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: @button-darkgreen;
+  }
+
+  &:active {
+    background-color: @button-darkgreen;
+    color: fade(@white, 30%);
+  }
+
+  @media (min-width: 660px) {
+    width: 295px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 456px;
+
+    &--unsuccessful {
+      width: 296px;
+    }
+  }
+}

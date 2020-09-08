@@ -104,7 +104,7 @@
     width: 2px;
     height: 30px;
     border-radius: 2px;
-    background-color: @specialgray;
+    background-color: fade(@gray, 30%);
     transform: rotate(-45deg);
     top: -6px;
   }
@@ -115,7 +115,7 @@
     width: 2px;
     height: 30px;
     border-radius: 2px;
-    background-color: @specialgray;
+    background-color: fade(@gray, 30%);
     transform: rotate(45deg);
     bottom: -3px;
   }
@@ -124,10 +124,38 @@
     transform: rotate(-180deg);
     top: 46px;
     left: 2px;
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: fade(@gray, 60%);
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: fade(@gray, 10%);
+      }
+    }
   }
 
   &--next {
     right: 1px;
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: fade(@gray, 60%);
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: fade(@gray, 10%);
+      }
+    }
   }
 
   @media (max-width: 1199px) {
