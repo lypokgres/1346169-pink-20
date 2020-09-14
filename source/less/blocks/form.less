@@ -131,26 +131,33 @@
 }
 
 .form__achievements-wrapper {
+  height: 440px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 49px;
 
   @media (min-width: 1200px) {
+    height: 120px;
     flex-direction: row;
+    padding-bottom: 39px;
   }
 }
 
 .form__achievement {
   position: relative;
   padding-left: 57px;
-  margin-bottom: 55px;
-
-  &:last-child {
-    margin-bottom: 48px;
-  }
 
   @media (min-width: 1200px) {
     margin-bottom: 52px;
+  }
+}
+
+.form__achievements-group {
+  display: contents;
+
+  @media (min-width: 1200px) {
+    display: block;
   }
 }
 
@@ -190,7 +197,12 @@
     border-left: 2px solid @pink;
     transform: rotate(-45deg);
     left: 8px;
-    bottom: 12px;
+    bottom: 11px;
+
+    @media (min-width: 660px) {
+      left: 6px;
+      bottom: 15px;
+    }
   }
 }
 
@@ -385,7 +397,12 @@
     border-radius: 100%;
     background-color: @pink;
     left: 13px;
-    bottom: 7px;
+    bottom: 5px;
+
+    @media (min-width: 660px) {
+      left: 11px;
+      bottom: 8px;
+    }
 
     @media (min-width: 1200px) {
       left: 85px;
@@ -429,7 +446,7 @@
   order: 4;
   flex-basis: 100%;
   margin: 0;
-  margin-bottom: 53px;
+  margin-bottom: 47px;
   border: 2px solid @specialgray;
   border-radius: 3px;
 
@@ -441,8 +458,8 @@
   @media (min-width: 660px) {
     padding: 0 60px;
     padding-top: 37px;
-    padding-bottom: 49px;
-    margin-bottom: 65px;
+    padding-bottom: 50px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: 1200px) {
@@ -454,7 +471,7 @@
 .form__message {
   box-sizing: border-box;
   width: 100%;
-  min-height: 195px;
+  min-height: 200px;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
@@ -476,6 +493,10 @@
     color: @gray;
     opacity: 1;
     font-family: "Open Sans", "Arial", sans-serif;
+  }
+
+  @media (min-width: 660px) {
+    min-height: 191px;
   }
 
   @media (min-width: 1200px) {
